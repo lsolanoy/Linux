@@ -42,4 +42,52 @@ Ubunutu VM setup
 <br />
 <br />
 
+Navigating the Command Line
+1. We will go over basic commands for navigating through the command line.
 
+"pwd" - print working directory
+ <br/>
+<img width="585" height="142" alt="image" src="https://github.com/user-attachments/assets/f8e12f32-4704-4594-bcde-ba6a7797e924" />
+<br />
+<br />
+"ls" - list directory contents
+ <br/>
+<img width="600" height="109" alt="image" src="https://github.com/user-attachments/assets/1b721273-b9fc-403c-afa2-0831a79c4932" />
+<br />
+<br />
+"cd" - change directory
+ <br/>
+<img width="500" height="125" alt="image" src="https://github.com/user-attachments/assets/a7f6bbce-2ab0-4c9a-8855-37d5f53d6f0e" />
+<br />
+<br />
+"mkdir" - make directory
+ <br/>
+<img width="399" height="114" alt="image" src="https://github.com/user-attachments/assets/67c612fd-7791-4058-a7a8-c2a5bee086f7" />
+<br />
+<br />
+"rmdir" - remove directory
+ <br/>
+<img width="393" height="135" alt="image" src="https://github.com/user-attachments/assets/63b93cbb-67d2-4ea3-8bdc-3dcb97c5e6ee" />
+<br />
+<br />
+
+"touch" + filename - create file 
+ <br/>
+<img width="408" height="107" alt="image" src="https://github.com/user-attachments/assets/cfe51355-6471-43a7-8c1f-76853acaf7b3" />
+<br />
+<br />
+
+"cat" + filename - display contents of file
+ <br/>
+<img width="404" height="86" alt="image" src="https://github.com/user-attachments/assets/017e4cd2-b362-4afe-a32f-7667e0cef4f9" />
+<br />
+<br />
+
+"rm" + filename - remove file
+ <br/>
+<img width="392" height="118" alt="image" src="https://github.com/user-attachments/assets/37b9363d-60d5-464e-be0a-a6e634134663" />
+<br />
+<br />
+
+Connnecting to Domain
+1. In this portion of the lab we will be connecting the Ubunutu VM to the Windows Domain we previously created. First, we need to make sure our Ubunutu VM is in the same VNET as the Domain Controller. On VirtualBox, C
