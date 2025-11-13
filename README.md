@@ -126,11 +126,38 @@ Connnecting to Domain
 <br />
 <br />
 
-7. The next command is used to disable systemd resolve service which acts a local DNS resolver. Instead we want our WIndows Machine to act as our DNS server.
+7. The next command is used to disable systemd resolve service which acts a local DNS resolver. Instead we want our Windows Machine to act as our DNS server.
  <br/>
 <img width="821" height="589" alt="image" src="https://github.com/user-attachments/assets/984872d3-a945-4fe5-880d-58561e7d61fd" />
 <br />
 <br />
 
-8.
+8. Now we are going to tell our Ubunutu where we are going to resolve by editing the resolv.conf file. In terminal type "nano etc/resolv.conf" > Navigate to bottom of fle > Change "namesever" to the IP address of your Windows Machine and Chnage "search" to the name of your domain.
+ <br/>
+<img width="814" height="583" alt="image" src="https://github.com/user-attachments/assets/4c1dc02e-2676-4b08-9681-b37a0adf106e" />
+<br />
+<br />
 
+9. We will use one of the packages we installed to discover our domain. Type "realm discover" + domain name
+ <br/>
+<img width="823" height="579" alt="image" src="https://github.com/user-attachments/assets/64aa1829-7a09-4647-a714-12cf1f9ad4ef" />
+<br />
+<br />
+
+10. Before we join the domain, I will show that the Ubunutu machine is not currently in the domain. On the WIndows machine, naviagte tu Server Manager > Tools > Active Directory Users and Computers > Computers
+ <br/>
+<img width="756" height="533" alt="image" src="https://github.com/user-attachments/assets/50c6801e-0333-4c45-a65c-87098025d2dd" />
+<br />
+<br />
+
+11. FInally, we will join the domain using an account with administrative priviledges so we don't get any permission issues. Type "realm join -U" + username + domain name. Type in password. If no errors, we have sucessfully join the Ubunut machine to domain.
+ <br/>
+<img width="931" height="647" alt="image" src="https://github.com/user-attachments/assets/39b0b497-9b88-437c-972d-708a61e329e6" />
+<br />
+<br />
+
+12. We can verify that the Ubunntu VM has been added by checking the same location in the previous step.
+ <br/>
+<img width="754" height="530" alt="image" src="https://github.com/user-attachments/assets/3f1e2312-3646-439d-807a-ff629866c380" />
+<br />
+<br />
