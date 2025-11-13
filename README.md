@@ -90,4 +90,47 @@ Navigating the Command Line
 <br />
 
 Connnecting to Domain
-1. In this portion of the lab we will be connecting the Ubunutu VM to the Windows Domain we previously created. First, we need to make sure our Ubunutu VM is in the same VNET as the Domain Controller. On VirtualBox, C
+1. In this portion of the lab we will be connecting the Ubunutu VM to the Windows Domain we previously created. First, we need to make sure our Ubunutu VM is in the same VNET as the Domain Controller. On VirtualBox, Click on Ubuntu VM > Setings > Network > Adapter > Choose same network DC is located in.
+ <br/>
+<img width="1256" height="952" alt="image" src="https://github.com/user-attachments/assets/3dc7f03f-9dc3-4430-9ee4-69b00b771bf2" />
+<br />
+<br />
+
+2. Boot up the Domain Controller and Ubuntu VMs. Log on to DC > Open Command Line > Type command "Ipconfig" > Take note of IP address. Log onto Ubuntu VM > Open Terminal > Type "sudo su" for superuser ppriviledges > Type command "ping" + IP address of DC. The purpose of this to make sure the Linux machine can connect to the Windwos machine.
+ <br/>
+<img width="816" height="584" alt="image" src="https://github.com/user-attachments/assets/b13a29c7-ca9d-4b25-ae9b-8cbf026a0fab" />
+<br />
+<br />
+
+3. We need to point the Ubuntu VM to the DC by changing some network settings. On the Ubuntu VM, click icon on bottom left corner > Type Advanced Networking > Click Wired Connection 1 > CLick IPv4 Settings. In the box next to "Additional DNS servers"  type the IP address of the DC because it is hosting DNS.
+ <br/>
+<img width="1149" height="736" alt="image" src="https://github.com/user-attachments/assets/ded64786-63e1-413a-95bc-adc1dba85256" />
+<br />
+<br />
+
+4. To ensure Network configuartions have been changed and updated,  type the command show below.
+ <br/>
+<img width="817" height="590" alt="image" src="https://github.com/user-attachments/assets/bf5aa7ae-6cc9-4a17-bf8b-5f52652bf358" />
+<br />
+<br />
+
+5. Now we need to install packges required to facilitate domain discovery, authentication and user management. This will allow us to join Windows Domain from Ubunutu machine. Type the command shown below.
+ <br/>
+<img width="823" height="589" alt="image" src="https://github.com/user-attachments/assets/17f2e306-42d3-43c4-a6a5-0c76e95d9e4f" />
+<br />
+<br />
+
+6. Next, we will chnage hostname of machine to reflect the domain we are trying to join. We will name the machine to "ubuntu" followed by your domain name. Exmaple shown below.
+ <br/>
+<img width="811" height="583" alt="image" src="https://github.com/user-attachments/assets/9d19017e-88b8-4e10-976f-de2a228dbe01" />
+<br />
+<br />
+
+7. The next command is used to disable systemd resolve service which acts a local DNS resolver. Instead we want our WIndows Machine to act as our DNS server.
+ <br/>
+<img width="821" height="589" alt="image" src="https://github.com/user-attachments/assets/984872d3-a945-4fe5-880d-58561e7d61fd" />
+<br />
+<br />
+
+8.
+
