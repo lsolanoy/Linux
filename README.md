@@ -11,6 +11,7 @@ In this lab, we will add an Ubunutu Linux machine to our virtual homelab. We wil
 
 - <b>VirtualBox</b> 
 - <b>Ubuntu Linux</b>
+- <b>Windows Server 2022</b>
 
 <h2>Lab walk-through:</h2>
 Ubunutu VM setup
